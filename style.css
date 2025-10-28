@@ -1,0 +1,135 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #ff7a59, #ffd97d);
+  --bg: #fff7e1;
+  --text: #704214;
+  --card: #fff0cc;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 0;
+}
+
+header {
+  background: var(--primary-gradient);
+  padding: 20px 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #fff5d1;
+  box-shadow: var(--shadow);
+}
+
+nav a {
+  padding: 14px 22px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--primary-gradient);
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 28px;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-left {
+  flex: 1 1 250px;
+}
+
+.home-right img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  background: var(--primary-gradient);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.about {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.contact form {
+  display: grid;
+  gap: 12px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff2ca;
+  color: var(--text);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+}
